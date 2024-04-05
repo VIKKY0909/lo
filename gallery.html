@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Lorence Public School</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+
+    .container h2{
+        font-size: 60px;
+        color: #382d72;
+    } 
+
+    .gallery-section1:hover .container h2{
+
+        color: white;
+    } 
+      /* Gallery Section */
+      .gallery-section1 {
+        padding: 80px 0;
+        text-align: center;
+        transition: all ease-in-out 0.3s;
+      }
+
+      .gallery-section1:hover{
+        transform: scale(1.005);
+        background-color: #a080e1;
+      }
+      .gallery-section1:hover .gallery-grid{
+        border-color: white;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        justify-items: center;
+        padding: 5%;
+        border: solid  #382d72 5px;
+        border-radius: 12px;
+        transition: all ease-in-out 0.5s;
+        
+      }
+      .gallery-grid:hover{
+        box-shadow: 0 10px 200px rgba(233, 232, 235, 0.897);
+        transform: scale(1.015);
+        border-color: white;
+        background-color: #382d72;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        border: 3px solid #382d72;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+      .gallery-section1:hover .gallery-item{
+        border: 2px solid white ;
+      }
+
+      .gallery-section1:hover  .gallery-item:hover {
+        transform: translateY(-5px);
+        border: 3px solid #fff;
+        box-shadow: 0 10px 60px rgba(233, 232, 235, 0.897);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: -100%; /* Initially hide the content */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), transparent);
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+        transition: bottom 0.5s ease-in-out; /* Transition for smooth effect */
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        bottom: 0;
+      }
+
+      .gallery-title {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .title{
+        width: 100%;
+        height: auto;
+        background-color: #382d72;
+        color: white;
+        font-size: 110%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 1.5%;
+        margin-bottom: 5%;
+        border-radius: 12px;
+        margin-top: 5%;
+        font-weight: 600;
+       
+      }
+
+      .gallery-section1:hover .title{
+        background-color: white;
+        color: #382d72;
+        font-size: 110%;
+        font-weight: 900;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        border: 1.5px solid #382d72;
+       
+      }
+
+      .gallery-description {
+        color: #fff;
+        font-size: 0.8rem;
+      }
+      .btn{
+        margin-top: 5%;
+        font-size: large;
+        color: #000000;
+      }
+      .gallery-section1:hover .btn{
+        background-color: #382d72;
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .btn:hover{
+        transform: scale(1.1);
+        box-shadow: 0 10px 60px rgba(233, 232, 235, 0.897);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @media (max-width:786px) {
+        .gallery-grid{
+            padding: 5% 2%;
+        }
+        .btn{
+            margin-top: 10%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="sc/IMG-20240220-WA0014.jpg" alt="logo" />
+          <div class="logo-text">Lorence Public School</div>
+        </div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="contacus.html">Admissions</a></li>
+          <li><a href="#student-life">Student Life</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contacus.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section1">
+      <div class="container">
+        <h2>Photo Gallery</h2>
+        <div class="title">
+            Meet Our Nuritoing staff
+              </div>
+        <div class="gallery-grid">
+          <!-- Gallery Items -->
+          
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0008.jpg" alt="Gallery Image 1" />
+            
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240228-WA0000.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240228-WA0004.jpg" alt="Gallery Image 2" />
+              
+          </div>
+        </div>
+        <div class="title">
+            Some Glimpse Of student Life at Lorence Public High School
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0004.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0003.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0009.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0011.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0012.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0016.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0017.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0022.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <div class="gallery-item">
+            <img src="sc/IMG-20240225-WA0024.jpg" alt="Gallery Image 2" />
+              
+          </div>
+          <!-- Add more gallery items here -->
+        </div>
+        <h4> <a href="contacus.html" class="btn">Admissions</a></h4>
+      </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Lorence Public School. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Navigation Toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        // Toggle menu visibility
+        function toggleMenu() {
+          navLinks.classList.toggle("show");
+        }
+
+        // Event listener for menu toggle button
+        menuToggle.addEventListener("click", function () {
+          toggleMenu();
+        });
+      });
+    </script>
+  </body>
+</html>

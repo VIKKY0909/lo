@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var closebtn = document.getElementsByClassName("closebtn");
-    var cons = document.getElementsByClassName("con");
+    const closebtn = document.getElementsByClassName("closebtn");
+    const cons = document.getElementsByClassName("con");
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.querySelector('.nav-links');
     const slider = document.querySelectorAll(".about-slide");
@@ -44,6 +44,13 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleMenu();
     });
 
+    // Add event listeners to each nav link to close the menu when clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function () {
+            toggleMenu();
+        });
+    });
+
     // Function to toggle menu visibility
     function toggleMenu() {
         const isMenuVisible = navLinks.classList.toggle('show');
@@ -66,5 +73,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
-    
 });
